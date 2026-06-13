@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BookVerse — Discover books, explore genres, save favorites, and find reading recommendations.">
+  <title>BookVerse — Discover Your Next Great Read</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="loading page-home">
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-book">
+        <span class="preloader-page"></span>
+        <span class="preloader-page"></span>
+        <span class="preloader-page"></span>
+      </div>
+      <p class="preloader-text">Book<span>Verse</span></p>
+      <div class="preloader-bar"><div class="preloader-progress" id="preloader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Section Tabs (Homepage) -->
+  <nav class="section-tabs" id="section-tabs" aria-label="Page sections">
+    <a href="#top-rated" class="section-tab active" data-section="top-rated"><i class="fas fa-trophy"></i> Top Rated</a>
+    <a href="#videos" class="section-tab" data-section="videos"><i class="fas fa-play"></i> Videos</a>
+    <a href="#new-releases" class="section-tab" data-section="new-releases"><i class="fas fa-bolt"></i> New</a>
+    <a href="#featured" class="section-tab" data-section="featured"><i class="fas fa-star"></i> Featured</a>
+    <a href="#search-section" class="section-tab" data-section="search-section"><i class="fas fa-search"></i> Search</a>
+    <a href="#favorites-section" class="section-tab" data-section="favorites-section"><i class="fas fa-heart"></i> Favorites</a>
+  </nav>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-book-open"></i>
+        Book<span>Verse</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#favorites-section" class="favorites-link" aria-label="View favorites">
+          <i class="fas fa-heart"></i>
+          <span class="favorites-badge" id="favorites-count">0</span>
+        </a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grain"></div>
+      <div class="parallax-layer hero-orb hero-orb-1" data-parallax="0.15"></div>
+      <div class="parallax-layer hero-orb hero-orb-2" data-parallax="0.25"></div>
+      <div class="parallax-layer hero-shape hero-shape-1" data-parallax="0.08"></div>
+      <div class="parallax-layer hero-shape hero-shape-2" data-parallax="0.12"></div>
+      <div class="parallax-layer hero-shape hero-shape-3" data-parallax="0.05"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-badge reveal" data-delay="0"><i class="fas fa-sparkles"></i> #1 Book Discovery Platform</span>
+        <h1 class="hero-title" id="hero-title">
+          <span class="title-line"><span class="title-word">Discover</span> <span class="title-word">Your</span> <span class="title-word">Next</span></span>
+          <span class="title-line title-accent"><span class="title-word">Great</span> <span class="title-word">Read</span></span>
+        </h1>
+        <p class="hero-desc reveal" data-delay="400">Explore thousands of books across every genre. Watch trailers, browse top-rated picks, save favorites, and embark on unforgettable literary journeys with BookVerse.</p>
+        <div class="hero-buttons reveal" data-delay="550">
+          <a href="#top-rated" class="btn btn-primary"><i class="fas fa-trophy"></i> Top Rated</a>
+          <a href="#videos" class="btn btn-glass"><i class="fas fa-play"></i> Watch Trailers</a>
+          <a href="#search-section" class="btn btn-outline"><i class="fas fa-search"></i> Browse All</a>
+        </div>
+        <div class="hero-stats reveal" data-delay="700">
+          <div class="hero-stat" data-count="24000" data-suffix="+"><strong>0</strong><span>Books Available</span></div>
+          <div class="hero-stat" data-count="50" data-suffix="+"><strong>0</strong><span>Genres</span></div>
+          <div class="hero-stat" data-count="25000" data-suffix="+"><strong>0</strong><span>Happy Readers</span></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal-scale" data-delay="300">
+        <div class="hero-showcase" id="hero-showcase">
+          <div class="hero-showcase-glow"></div>
+          <div class="hero-floating-covers" id="hero-floating-covers"></div>
+        </div>
+      </div>
+    </div>
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee" id="marquee-track"></div>
+    </div>
+  </section>
+
+  <!-- Top Rated Books -->
+  <section class="section top-rated-section parallax-section" id="top-rated">
+    <div class="parallax-bg parallax-bg-1" data-parallax="0.2"></div>
+    <div class="section-number" aria-hidden="true">01</div>
+    <div class="container">
+      <div class="section-header reveal-group">
+        <span class="section-tag reveal" data-delay="0"><i class="fas fa-crown"></i> Reader's Choice</span>
+        <h2 class="reveal" data-delay="100">Top Rated Books</h2>
+        <p class="reveal" data-delay="200">The highest-rated titles loved by our community — ranked by star ratings, reviews, and reader engagement.</p>
+      </div>
+      <div class="top-rated-podium" id="top-rated-podium"></div>
+      <div class="top-rated-scroll-wrap slide-up">
+        <div class="top-rated-scroll" id="top-rated-scroll"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Videos & Trailers -->
+  <section class="section section-dark videos-section parallax-section" id="videos">
+    <div class="parallax-bg parallax-bg-dark" data-parallax="0.15"></div>
+    <div class="section-number section-number-light" aria-hidden="true">02</div>
+    <div class="container">
+      <div class="section-header slide-up">
+        <span class="section-tag section-tag-light"><i class="fas fa-film"></i> Cinematic Reads</span>
+        <h2>Book Trailers & Video Reviews</h2>
+        <p>Experience stories before you read — watch official trailers, author interviews, and curated book reviews from the BookVerse channel.</p>
+      </div>
+      <div class="video-featured slide-up" id="video-featured"></div>
+      <div class="video-grid" id="video-grid"></div>
+    </div>
+  </section>
+
+  <!-- New Releases — Horizontal Showcase -->
+  <section class="section showcase-section parallax-section" id="new-releases">
+    <div class="parallax-bg parallax-bg-2" data-parallax="0.18"></div>
+    <div class="section-number" aria-hidden="true">03</div>
+    <div class="container">
+      <div class="showcase-header reveal-group">
+        <div>
+          <span class="section-tag reveal" data-delay="0"><i class="fas fa-bolt"></i> Fresh Arrivals</span>
+          <h2 class="reveal" data-delay="100">New & Trending</h2>
+        </div>
+        <p class="reveal" data-delay="200">Swipe through the latest additions to our library — handpicked titles making waves right now.</p>
+      </div>
+    </div>
+    <div class="showcase-track-wrap">
+      <div class="showcase-track" id="showcase-track"></div>
+    </div>
+  </section>
+
+  <!-- Featured Books -->
+  <section class="section" id="featured">
+    <div class="section-number" aria-hidden="true">04</div>
+    <div class="container">
+      <div class="section-header reveal-group">
+        <h2 class="reveal" data-delay="0">Featured Books</h2>
+        <p class="reveal" data-delay="100">Hand-picked selections from our editors — the must-read titles making waves in the literary world.</p>
+      </div>
+      <div class="books-grid stagger-grid" id="featured-books"></div>
+    </div>
+  </section>
+
+  <!-- Popular Categories -->
+  <section class="section section-alt" id="categories">
+    <div class="section-number" aria-hidden="true">05</div>
+    <div class="container">
+      <div class="section-header slide-up">
+        <h2>Popular Categories</h2>
+        <p>Dive into your favorite genres or discover something entirely new. Every category holds a world of stories waiting for you.</p>
+      </div>
+      <div class="categories-grid" id="categories-grid"></div>
+    </div>
+  </section>
+
+  <!-- Search Books -->
+  <section class="section search-section" id="search-section">
+    <div class="container">
+      <div class="section-header slide-up">
+        <h2>Search Books</h2>
+        <p>Find your perfect read by title, author, or genre. Our smart search helps you discover exactly what you're looking for.</p>
+      </div>
+      <div class="search-bar">
+        <div class="search-input-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="search-input" placeholder="Search by title, author, or genre..." aria-label="Search books">
+        </div>
+        <select class="genre-filter" id="genre-filter" aria-label="Filter by genre">
+          <option value="all">All Genres</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Romance">Romance</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Self-Help">Self-Help</option>
+          <option value="History">History</option>
+        </select>
+        <button class="btn btn-primary" id="search-btn"><i class="fas fa-search"></i> Search</button>
+      </div>
+      <p class="results-count" id="results-count"></p>
+      <div class="books-grid stagger-grid" id="search-results"></div>
+    </div>
+  </section>
+
+  <!-- Recommended Reads -->
+  <section class="section" id="recommended">
+    <div class="container">
+      <div class="section-header slide-up">
+        <h2>Recommended Reads</h2>
+        <p>Curated recommendations based on trending titles and reader favorites across the BookVerse community.</p>
+      </div>
+      <div class="books-grid stagger-grid" id="recommended-books"></div>
+    </div>
+  </section>
+
+  <!-- Favorites Section -->
+  <section class="section section-alt" id="favorites-section">
+    <div class="container">
+      <div class="section-header slide-up">
+        <h2>Your Favorites</h2>
+        <p>Books you've saved for later. Your personal reading list, always accessible.</p>
+      </div>
+      <div class="favorites-empty" id="favorites-empty">
+        <i class="far fa-heart"></i>
+        <h3>No favorites yet</h3>
+        <p>Click the heart icon on any book to save it here.</p>
+      </div>
+      <div class="books-grid" id="favorites-grid"></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header slide-up">
+        <h2>Reader Testimonials</h2>
+        <p>Hear from our community of passionate readers who've transformed their reading experience with BookVerse.</p>
+      </div>
+      <div class="testimonials-grid" id="testimonials-slider"></div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section">
+    <div class="newsletter slide-up">
+      <h2>Stay in the Loop</h2>
+      <p>Subscribe to our newsletter for weekly book recommendations, author spotlights, and exclusive reading lists.</p>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" placeholder="Enter your email address" required aria-label="Email for newsletter">
+        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Subscribe</button>
+      </form>
+      <p class="form-message" id="newsletter-message"></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><i class="fas fa-book-open"></i> Book<span>Verse</span></a>
+          <p>Your gateway to the world of literature. Discover, explore, and fall in love with reading all over again.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Goodreads"><i class="fab fa-goodreads-g"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#search-section">Browse Books</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Genres</h4>
+          <ul class="footer-links">
+            <li><a href="#search-section">Fantasy</a></li>
+            <li><a href="#search-section">Mystery</a></li>
+            <li><a href="#search-section">Romance</a></li>
+            <li><a href="#search-section">Science Fiction</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 BookVerse. All rights reserved. Made with <i class="fas fa-heart" style="color:var(--color-primary)"></i> for book lovers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Book Details Modal -->
+  <div class="modal" id="book-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      <div class="modal-body">
+        <div class="modal-cover-wrapper" id="modal-cover-wrapper"></div>
+        <div class="modal-details">
+          <span class="book-genre modal-genre" id="modal-genre"></span>
+          <h2 id="modal-title"></h2>
+          <p class="modal-author" id="modal-author"></p>
+          <div class="modal-rating" id="modal-rating"></div>
+          <p class="modal-description" id="modal-description"></p>
+          <div class="modal-meta" id="modal-meta"></div>
+          <div class="modal-actions">
+            <button class="btn btn-primary" id="modal-favorite"><i class="far fa-heart"></i> Save to Favorites</button>
+            <button class="btn btn-outline" id="modal-video-btn" style="display:none"><i class="fas fa-play"></i> Watch Trailer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Player Modal -->
+  <div class="modal video-modal" id="video-modal" role="dialog" aria-hidden="true">
+    <div class="modal-content video-modal-content">
+      <button class="modal-close" id="video-modal-close" aria-label="Close video"><i class="fas fa-times"></i></button>
+      <div class="video-player-wrap">
+        <iframe id="video-iframe" src="" title="Book video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-modal-info">
+        <h3 id="video-modal-title"></h3>
+        <p id="video-modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

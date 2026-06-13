@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact BookVerse — get in touch, find our location, and browse frequently asked questions.">
+  <title>Contact Us — BookVerse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-book-open"></i>
+        Book<span>Verse</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="index.html#top-rated" class="nav-link"><i class="fas fa-trophy"></i> Top Rated</a></li>
+        <li><a href="index.html#favorites-section" class="nav-link"><i class="fas fa-heart"></i> Favorites</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="index.html#favorites-section" class="favorites-link" aria-label="View favorites">
+          <i class="fas fa-heart"></i>
+          <span class="favorites-badge" id="favorites-count">0</span>
+        </a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Reach out with questions, feedback, or partnership inquiries.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info-cards">
+          <div class="contact-card slide-up">
+            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h3>Our Location</h3>
+              <p>123 Literary Lane, Booktown<br>Reading District, RD 10001</p>
+            </div>
+          </div>
+          <div class="contact-card slide-up">
+            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h3>Phone Number</h3>
+              <p>+1 (555) 123-4567<br>Mon–Fri, 9:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-card slide-up">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h3>Email Address</h3>
+              <p>hello@bookverse.com<br>support@bookverse.com</p>
+            </div>
+          </div>
+          <div class="contact-card slide-up">
+            <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h3>Business Hours</h3>
+              <p>Monday – Friday: 9 AM – 6 PM<br>Saturday: 10 AM – 4 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper slide-up">
+          <h2 style="margin-bottom:0.5rem">Send Us a Message</h2>
+          <p style="color:var(--color-text-muted);margin-bottom:1.5rem">Fill out the form below and we'll get back to you within 24 hours.</p>
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required>
+              <p class="error-message" id="name-error"></p>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+              <p class="error-message" id="email-error"></p>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+              <p class="error-message" id="subject-error"></p>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+              <p class="error-message" id="message-error"></p>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="form-success">
+              <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Placeholder -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header slide-up">
+        <h2>Find Us</h2>
+        <p>Visit our headquarters in the heart of Booktown's literary district.</p>
+      </div>
+      <div class="map-placeholder slide-up">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3>123 Literary Lane, Booktown</h3>
+        <p>Interactive map coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header slide-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common questions about BookVerse.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item slide-up">
+          <div class="faq-question">
+            <span>Is BookVerse free to use?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! BookVerse is completely free to browse, search, and save favorites. We believe everyone should have access to great book recommendations without barriers.</p>
+          </div>
+        </div>
+        <div class="faq-item slide-up">
+          <div class="faq-question">
+            <span>How do I save books to my favorites?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Simply click the heart icon on any book card or in the book details modal. Your favorites are saved locally in your browser using Local Storage, so they persist between visits.</p>
+          </div>
+        </div>
+        <div class="faq-item slide-up">
+          <div class="faq-question">
+            <span>Can I purchase books through BookVerse?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Currently, BookVerse is a discovery platform. We help you find great books, and you can purchase them through your preferred bookstore or online retailer. Purchase integration is on our roadmap.</p>
+          </div>
+        </div>
+        <div class="faq-item slide-up">
+          <div class="faq-question">
+            <span>How are book recommendations generated?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Our recommendations are curated by our editorial team based on trending titles, reader ratings, and community favorites. We're working on personalized AI-powered recommendations for the future.</p>
+          </div>
+        </div>
+        <div class="faq-item slide-up">
+          <div class="faq-question">
+            <span>How do I switch between dark and light mode?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Click the moon/sun icon in the navigation bar to toggle between dark and light themes. Your preference is saved automatically and will be remembered on your next visit.</p>
+          </div>
+        </div>
+        <div class="faq-item slide-up">
+          <div class="faq-question">
+            <span>How can I suggest a book to be added?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We love hearing from our community! Use the contact form above with the subject "Book Suggestion" and tell us about the title you'd like to see on BookVerse.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><i class="fas fa-book-open"></i> Book<span>Verse</span></a>
+          <p>Your gateway to the world of literature. Discover, explore, and fall in love with reading all over again.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Goodreads"><i class="fab fa-goodreads-g"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#search-section">Browse Books</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Genres</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#search-section">Fantasy</a></li>
+            <li><a href="index.html#search-section">Mystery</a></li>
+            <li><a href="index.html#search-section">Romance</a></li>
+            <li><a href="index.html#search-section">Science Fiction</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 BookVerse. All rights reserved. Made with <i class="fas fa-heart" style="color:var(--color-primary)"></i> for book lovers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
